@@ -16,4 +16,4 @@ CSV_PATH = DATA_DIR / "employees.csv"
 DB_PATH = DATA_DIR / "hr_database.db"
 
 # API Keys
-API_KEY = os.getenv("API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")

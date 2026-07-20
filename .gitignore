@@ -1,5 +1,5 @@
 .env
 .venv/
 chroma_db/
-data/hr_database.db
+data
 __pycache__/

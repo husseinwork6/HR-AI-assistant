@@ -1,6 +1,8 @@
 # HR AI Assistant
 A full-stack, serverless HR assistant that answers policy questions and retrieves employee records using Retrieval-Augmented Generation (RAG) and structured data querying.
 
+### Run at: https://hrassistant1.netlify.app/
+
 ## Architecture
 * **Frontend:** Plain HTML5, Tailwind CSS (CDN), deployed on Netlify.
 * **Backend:** FastAPI running serverless on Modal.

@@ -71,7 +71,8 @@
   </div>
 
   <script>
-    const API_URL = "https://hr-ai-assistant-bvfc.onrender.com";
+    // ✅ Updated URL pointing to your permanent Modal production endpoint
+    const API_URL = "https://husseinwork6--hr-ai-assistant-fastapi-app.modal.run/ask";
 
     const form = document.getElementById('askForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -99,8 +100,13 @@
 
         const data = await response.json();
 
+        // Check if response is ok
+        if (!response.ok) {
+          throw new Error(data.detail || "Failed to fetch response");
+        }
+
         // Render Answer
-        answerText.innerText = data.answer;
+        answerText.innerText = data.answer || "No response text received.";
 
         // Render Source Badge
         if (data.source === 'rag') {
@@ -116,7 +122,7 @@
 
         responseContainer.classList.remove('hidden');
       } catch (err) {
-        answerText.innerText = "Error connecting to the backend server. Make sure FastAPI is running.";
+        answerText.innerText = "Error connecting to the backend server. Make sure your Modal deployment is active.";
         sourceBadge.innerText = "Connection Error";
         sourceBadge.className = "text-xs font-medium px-2.5 py-1 rounded-full bg-rose-900/60 text-rose-300 border border-rose-700";
         responseContainer.classList.remove('hidden');

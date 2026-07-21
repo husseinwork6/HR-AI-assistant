@@ -11,7 +11,7 @@ image = (
         "langchain-community",
         "langchain-groq",
         "langchain-huggingface",
-        "sentence-transformers",  # ✅ Added
+        "sentence-transformers",
         "langchain-chroma",
         "chromadb",
         "pandas",

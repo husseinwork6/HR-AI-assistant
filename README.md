@@ -69,7 +69,8 @@ uv run modal deploy src/app_modal.py
 **Response**
 ```json
 {
-  "answer": "You have 12 annual leave days remaining for the current calendar year.",
-  "source": "structured_data"
+  "answer": "You have 18 annual leave days left.",
+  "source": "Employee Database (SQL)
+"
 }
 ```
